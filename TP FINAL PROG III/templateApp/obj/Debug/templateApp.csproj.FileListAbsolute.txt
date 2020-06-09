@@ -1,0 +1,26 @@
+c:\users\pc\documents\visual studio 2012\Projects\templateApp\templateApp\bin\templateApp.dll
+c:\users\pc\documents\visual studio 2012\Projects\templateApp\templateApp\bin\templateApp.pdb
+c:\users\pc\documents\visual studio 2012\Projects\templateApp\templateApp\obj\Debug\templateApp.csprojResolveAssemblyReference.cache
+c:\users\pc\documents\visual studio 2012\Projects\templateApp\templateApp\obj\Debug\templateApp.dll
+c:\users\pc\documents\visual studio 2012\Projects\templateApp\templateApp\obj\Debug\templateApp.pdb
+C:\Users\Carlos\Desktop\ASESORIAS-gh-pages\Ejercicios\13.-TemplateTablasinputsASPCSHARP\templateApp\templateApp\bin\templateApp.dll.config
+C:\Users\Carlos\Desktop\ASESORIAS-gh-pages\Ejercicios\13.-TemplateTablasinputsASPCSHARP\templateApp\templateApp\bin\templateApp.dll
+C:\Users\Carlos\Desktop\ASESORIAS-gh-pages\Ejercicios\13.-TemplateTablasinputsASPCSHARP\templateApp\templateApp\bin\templateApp.pdb
+C:\Users\Carlos\Desktop\ASESORIAS-gh-pages\Ejercicios\13.-TemplateTablasinputsASPCSHARP\templateApp\templateApp\obj\Debug\templateApp.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\ASESORIAS-gh-pages\Ejercicios\13.-TemplateTablasinputsASPCSHARP\templateApp\templateApp\obj\Debug\templateApp.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\ASESORIAS-gh-pages\Ejercicios\13.-TemplateTablasinputsASPCSHARP\templateApp\templateApp\obj\Debug\templateApp.dll
+C:\Users\Carlos\Desktop\ASESORIAS-gh-pages\Ejercicios\13.-TemplateTablasinputsASPCSHARP\templateApp\templateApp\obj\Debug\templateApp.pdb
+C:\Users\Carlos\Desktop\TP FINAL PROG III\templateApp\templateApp\bin\templateApp.dll.config
+C:\Users\Carlos\Desktop\TP FINAL PROG III\templateApp\templateApp\bin\templateApp.dll
+C:\Users\Carlos\Desktop\TP FINAL PROG III\templateApp\templateApp\bin\templateApp.pdb
+C:\Users\Carlos\Desktop\TP FINAL PROG III\templateApp\templateApp\obj\Debug\templateApp.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\TP FINAL PROG III\templateApp\templateApp\obj\Debug\templateApp.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\TP FINAL PROG III\templateApp\templateApp\obj\Debug\templateApp.dll
+C:\Users\Carlos\Desktop\TP FINAL PROG III\templateApp\templateApp\obj\Debug\templateApp.pdb
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TP FINAL PROG III\templateApp\bin\templateApp.dll.config
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TP FINAL PROG III\templateApp\bin\templateApp.dll
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TP FINAL PROG III\templateApp\bin\templateApp.pdb
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TP FINAL PROG III\templateApp\obj\Debug\templateApp.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TP FINAL PROG III\templateApp\obj\Debug\templateApp.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TP FINAL PROG III\templateApp\obj\Debug\templateApp.dll
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TP FINAL PROG III\templateApp\obj\Debug\templateApp.pdb
