@@ -134,65 +134,41 @@
                         <li class="header">MENU DE NAVEGACION</li>
                        
                         <li>
-                            <a href="inicio.aspx">
+                            <a href="usuarios.aspx">
                                 <i class="fa fa-android"></i><span>inicio</span>
                             </a>
                         </li>
                         
 
-                        <li class="treeview">
+                        <li>
                             <a href="usuarios.aspx">
-                                <i class="fa fa-bus"></i><span>Micros</span> <i class="fa fa-angle-left pull-right"></i>
+                                <i class="fa fa-bus"></i><span>Micros</span>
                             </a>
-                            <ul class="treeview-menu">
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Alta</a></li>
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Baja</a></li>
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Modificacion</a></li>
-                               
-
-                            </ul>
+                           
                         </li>
 
 
-                         <li class="treeview">
-                            <a href="usuarios.aspx">
-                                <i class="fa fa-eye"></i><span>Choferes</span> <i class="fa fa-angle-left pull-right"></i>
+                         <li>
+                            <a href="inicio.aspx">
+                                <i class="fa fa-eye"></i><span>Choferes</span>
                             </a>
-                            <ul class="treeview-menu">
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Alta</a></li>
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Baja</a></li>
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Modificacion</a></li>
-                               
-
-                            </ul>
+                            
                         </li>
 
                         <li class="treeview">
                             <a href="usuarios.aspx">
-                                <i class="fa fa-tree"></i><span>Destinos</span> <i class="fa fa-angle-left pull-right"></i>
+                                <i class="fa fa-tree"></i><span>Destinos</span> 
                             </a>
-                            <ul class="treeview-menu">
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Alta</a></li>
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Baja</a></li>
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Modificacion</a></li>
-                              
-
-                            </ul>
+                            
                         </li>
            
 
 
                        <li class="treeview">
                             <a href="usuarios.aspx">
-                                <i class="fa fa-user"></i><span>Usuarios</span> <i class="fa fa-angle-left pull-right"></i>
+                                <i class="fa fa-user"></i><span>Usuarios</span> 
                             </a>
-                            <ul class="treeview-menu">
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Alta</a></li>
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Baja</a></li>
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Modificacion</a></li>
-                              
-
-                            </ul>
+                           
                         </li>
 
 
@@ -200,22 +176,16 @@
 
                          <li class="treeview">
                             <a href="usuarios.aspx">
-                                <i class="fa fa-plane"></i><span>Viajes</span> <i class="fa fa-angle-left pull-right"></i>
+                                <i class="fa fa-plane"></i><span>Viajes</span> 
                             </a>
-                            <ul class="treeview-menu">
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Alta</a></li>
-                                
-                            </ul>
+                           
                         </li>
 
                         <li class="treeview">
                             <a href="usuarios.aspx">
-                                <i class="fa fa-ticket"></i><span>Pasajes</span> <i class="fa fa-angle-left pull-right"></i>
+                                <i class="fa fa-ticket"></i><span>Pasajes</span>
                             </a>
-                            <ul class="treeview-menu">
-                                <li class="active"><a href="inicio.aspx"><i class="fa fa-circle-o"></i>Alta</a></li>
-                                
-                            </ul>
+                            
                         </li>
 
                         
@@ -234,11 +204,7 @@
                 <section class="content-header">
                     
                     
-                    <h1>Blank page
-           
-                        <small>it all starts here</small>
-
-                    </h1>
+                  
 
 
 

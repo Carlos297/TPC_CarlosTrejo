@@ -1,0 +1,9 @@
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TPC_CarlosTrejo\TP FINAL PROG III\Negocio\bin\Debug\Negocio.dll
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TPC_CarlosTrejo\TP FINAL PROG III\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TPC_CarlosTrejo\TP FINAL PROG III\Negocio\bin\Debug\Dominio.dll
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TPC_CarlosTrejo\TP FINAL PROG III\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TPC_CarlosTrejo\TP FINAL PROG III\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TPC_CarlosTrejo\TP FINAL PROG III\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TPC_CarlosTrejo\TP FINAL PROG III\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TPC_CarlosTrejo\TP FINAL PROG III\Negocio\obj\Debug\Negocio.dll
+C:\Users\Carlos\Desktop\TP FINAL PROG III\TPC_CarlosTrejo\TP FINAL PROG III\Negocio\obj\Debug\Negocio.pdb

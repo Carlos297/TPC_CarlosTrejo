@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace templateApp {
-    
-    
-    public partial class inicio {
+namespace templateApp
+{
 
 
+    public partial class inicio
+    {
     }
 }
