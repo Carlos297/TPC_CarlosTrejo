@@ -12,9 +12,8 @@ namespace Dominio
         public int Legajo { get; set; }
         public string Apellido { get; set; }
         public string Nombre { get; set; }
-        public char Sexo { get; set; }
+        public string Sexo { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public string ImagenURL { get; set; }
-        public char Estado { get; set; }  //si esta de licencia o no
+        public string Estado { get; set; }  //si esta de licencia o no
     }
 }

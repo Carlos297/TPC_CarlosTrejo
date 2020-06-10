@@ -24,7 +24,7 @@ namespace Negocio
 
             try
             {
-                datos.SetearQery("Select ID, Legajo, Apellidos, Nombres from Choferes");
+                datos.SetearQery("Select ID, Legajo, Apellidos, Nombres, Sexo, FechaNac, Estado from Choferes");
 
                 datos.ejecutarLector();
 
@@ -45,8 +45,14 @@ namespace Negocio
                     if (!Convert.IsDBNull(datos.lector["Nombres"]))
                         aux.Nombre = datos.lector.GetString(3);
 
-                    //if (!Convert.IsDBNull(datos.lector["Sexo"]))
-                    //    aux.Sexo = datos.lector.GetChar(4);
+                    if (!Convert.IsDBNull(datos.lector["Sexo"]))
+                        aux.Sexo = datos.lector.GetString(4);
+
+                    if (!Convert.IsDBNull(datos.lector["FechaNac"]))
+                        aux.FechaNacimiento = datos.lector.GetDateTime(5);
+
+                    if (!Convert.IsDBNull(datos.lector["Estado"]))
+                        aux.Estado = datos.lector.GetString(6);
 
                     //if (!Convert.IsDBNull(datos.lector["FechaNac"]))
                     //    aux.FechaNacimiento = datos.lector.GetSqlDateTime(3);
@@ -92,12 +98,15 @@ namespace Negocio
 
                 conexion.ConnectionString = "data source=localhost\\sqlexpress; initial catalog=TP_Final; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "insert into Choferes (Legajo, Apellidos, Nombres) Values (@Legajo, @Apellidos, @Nombres)";
+                comando.CommandText = "insert into Choferes (Legajo, Apellidos, Nombres, Sexo, FechaNac, Estado) Values (@Legajo, @Apellidos, @Nombres, @Sexo, @FechaNac, @Estado)";
                 comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@Legajo", nuevo.Legajo.ToString());
                 comando.Parameters.AddWithValue("@Apellidos", nuevo.Apellido.ToString());
                 comando.Parameters.AddWithValue("@Nombres", nuevo.Nombre.ToString());
-                
+                comando.Parameters.AddWithValue("@Sexo", nuevo.Sexo.ToString());
+                comando.Parameters.AddWithValue("@FechaNac", DateTime.Parse(nuevo.FechaNacimiento.ToString()));
+                comando.Parameters.AddWithValue("@Estado", nuevo.Estado.ToString());
+
                 comando.Connection = conexion;
 
                 conexion.Open();

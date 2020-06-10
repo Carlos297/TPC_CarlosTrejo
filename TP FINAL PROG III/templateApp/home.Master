@@ -128,67 +128,71 @@
                             <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
                         </div>
                     </div>
-                    
+
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="header">MENU DE NAVEGACION</li>
-                       
+
                         <li>
                             <a href="usuarios.aspx">
                                 <i class="fa fa-android"></i><span>inicio</span>
                             </a>
                         </li>
-                        
+
 
                         <li>
                             <a href="usuarios.aspx">
                                 <i class="fa fa-bus"></i><span>Micros</span>
                             </a>
-                           
+
                         </li>
 
 
-                         <li>
+                        <li class="treeview">
                             <a href="Choferes.aspx">
                                 <i class="fa fa-eye"></i><span>Choferes</span>
                             </a>
-                            
+                            <ul class="treeview-menu">
+                                <li><a href="../../Choferes.aspx"><i class="fa fa-circle-o"></i>Choferes</a></li>
+                                <li><a href="../../NuevoChofer.aspx"><i class="fa fa-circle-o"></i>Alta Chofer</a></li>
+                            </ul>
                         </li>
+
 
                         <li class="treeview">
                             <a href="usuarios.aspx">
-                                <i class="fa fa-tree"></i><span>Destinos</span> 
+                                <i class="fa fa-tree"></i><span>Destinos</span>
                             </a>
-                            
-                        </li>
-           
 
-
-                       <li class="treeview">
-                            <a href="usuarios.aspx">
-                                <i class="fa fa-user"></i><span>Usuarios</span> 
-                            </a>
-                           
                         </li>
 
 
-                        
 
-                         <li class="treeview">
+                        <li class="treeview">
                             <a href="usuarios.aspx">
-                                <i class="fa fa-plane"></i><span>Viajes</span> 
+                                <i class="fa fa-user"></i><span>Usuarios</span>
                             </a>
-                           
+
+                        </li>
+
+
+
+
+                        <li class="treeview">
+                            <a href="usuarios.aspx">
+                                <i class="fa fa-plane"></i><span>Viajes</span>
+                            </a>
+
                         </li>
 
                         <li class="treeview">
                             <a href="usuarios.aspx">
                                 <i class="fa fa-ticket"></i><span>Pasajes</span>
                             </a>
-                            
+
                         </li>
 
-                        
+
 
 
                     </ul>
@@ -202,9 +206,9 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    
-                    
-                  
+
+
+
 
 
 

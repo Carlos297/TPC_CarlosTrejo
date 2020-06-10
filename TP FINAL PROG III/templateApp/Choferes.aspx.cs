@@ -59,10 +59,7 @@ namespace templateApp
         }
 
 
-        protected void btnNuevoChofer_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("NuevoChofer.aspx");
-        }
+        
 
 
     }

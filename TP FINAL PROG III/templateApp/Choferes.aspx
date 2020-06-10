@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="Choferes.aspx.cs" Inherits="templateApp.productos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Productos</title>
 </asp:Content>
@@ -7,20 +8,13 @@
 
 
 
-     <div class="jumbotron">
+    <div class="jumbotron">
 
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title">Choferes</h3>
-                        <div class="box-tools">
-                            <div class="input-group">
-
-                                <div class="input-group-btn">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <!-- /.box-header -->
 
@@ -42,33 +36,50 @@
         </asp:Repeater>--%>
 
                     <table class="table table-hover">
-                         <tr>
+                        <tr>
                             <th>ID</th>
                             <th>Legajo</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
+                            <th>Sexo</th>
+                            <th>Nacimiento</th>
+                       
+                            <th>Estado</th>
+                           
                         </tr>
-                    <% foreach (var item in listaChoferes)
-                        { %>
+                        <% foreach (var item in listaChoferes)
+                            { %>
                         <tr>
                             <td><% = item.IdChofer %></td>
                             <td><% = item.Legajo %></td>
                             <td><% = item.Nombre %></td>
                             <td><% = item.Apellido %> </td>
+                            <td><% = item.Sexo %> </td>
+                            <td><% = item.FechaNacimiento.ToString() %> </td>
+                            
+                            <td><% = item.Estado %> </td>
+                            <td>
+                                <a class="btn btn-app">
+                                   
+                                    <i class="fa fa-remove"></i>Eliminar
+                                </a>
+                                <a class="btn btn-app">
+                                    <i class="fa fa-edit"></i>Editar
+                                </a>
+                            </td>
                         </tr>
-                    <% } %>
-
-                      </table>
+                        <% } %>
+                    </table>
                 </div>
                 <!-- /.box-body -->
-                <td><button class="btn  btn-success" id="btnNuevoChofer" aria-autocomplete="inline">Nuevo Chofer</button></td>
+               
             </div>
-            
+
             <!-- /.box -->
         </div>
     </div>
 
-    
+
 
     <%-- Esto reemplaza el foreach. Vean que cambia la forma de pasar el argumento a cada tag.
             En este caso se usa el numeral (#) y la función Eval que recibe por parámetro como string
@@ -89,7 +100,4 @@
                 </div>
             </ItemTemplate>
         </asp:Repeater>--%>
-
-
-
 </asp:Content>
