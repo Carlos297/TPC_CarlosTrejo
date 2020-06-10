@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace templateApp
 {
-    public partial class productos : System.Web.UI.Page
+    public partial class NuevoChofer : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

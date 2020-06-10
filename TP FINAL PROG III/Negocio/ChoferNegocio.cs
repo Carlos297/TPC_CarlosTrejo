@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio;
+using System.Data.SqlClient;
 
 namespace Negocio
 {
@@ -73,6 +74,53 @@ namespace Negocio
             }
 
         }
+
+
+
+
+
+        public void agregar(Chofer nuevo)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+
+            
+
+
+            try
+            {
+
+                conexion.ConnectionString = "data source=localhost\\sqlexpress; initial catalog=TP_Final; integrated security=sspi";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "insert into Choferes (Legajo, Apellidos, Nombres) Values (@Legajo, @Apellidos, @Nombres)";
+                comando.Parameters.Clear();
+                comando.Parameters.AddWithValue("@Legajo", nuevo.Legajo.ToString());
+                comando.Parameters.AddWithValue("@Apellidos", nuevo.Apellido.ToString());
+                comando.Parameters.AddWithValue("@Nombres", nuevo.Nombre.ToString());
+                
+                comando.Connection = conexion;
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+
+
+                conexion.Close();
+            }
+        }
+
+
+
 
 
 
