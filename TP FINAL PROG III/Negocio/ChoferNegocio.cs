@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dominio;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace Negocio
 {
@@ -24,7 +25,7 @@ namespace Negocio
 
             try
             {
-                datos.SetearQery("Select ID, Legajo, Apellidos, Nombres, Sexo, FechaNac, Estado from Choferes");
+                datos.SetearQery("Select ID, Legajo, Apellidos, Nombres, Sexo, FechaNac, Estado from Choferes where Estado = 'A'");
 
                 datos.ejecutarLector();
 
@@ -104,7 +105,7 @@ namespace Negocio
                 comando.Parameters.AddWithValue("@Apellidos", nuevo.Apellido.ToString());
                 comando.Parameters.AddWithValue("@Nombres", nuevo.Nombre.ToString());
                 comando.Parameters.AddWithValue("@Sexo", nuevo.Sexo.ToString());
-                comando.Parameters.AddWithValue("@FechaNac", DateTime.Parse(nuevo.FechaNacimiento.ToString()));
+                comando.Parameters.AddWithValue("@FechaNac", nuevo.FechaNacimiento);
                 comando.Parameters.AddWithValue("@Estado", nuevo.Estado.ToString());
 
                 comando.Connection = conexion;
@@ -130,8 +131,58 @@ namespace Negocio
 
 
 
+        public void bajaChofer(string idChofer)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                //SqlCommand cmd = new SqlCommand();
+                datos.setearSP("SP_BajaChofer");
+                datos.AgregarParametro("@idChofer", idChofer);
+
+                //datos.SetearQery("delete from ARTICULOS where id=" + id);
+                datos.ejecutarAccion();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
 
 
 
+        public void modificarChofer(Chofer chofer)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                //datos.setearQuery("Update POKEMONS set Nombre=@Nombre Where Id=@Id");
+                datos.setearSP("SP_ModificarChofer");
+                datos.AgregarParametro("@Id", chofer.IdChofer.ToString());
+                datos.AgregarParametro("@Legajo", chofer.Legajo.ToString());
+                datos.AgregarParametro("@Apellidos", chofer.Apellido);
+                datos.AgregarParametro("@Nombres", chofer.Nombre);
+                datos.AgregarParametro("@Sexo", chofer.Sexo);
+                datos.AgregarParametro("@FechaNac", chofer.FechaNacimiento.ToString());
+                datos.AgregarParametro("@Estado", chofer.Estado);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+       
     }
 }

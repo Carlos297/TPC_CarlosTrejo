@@ -11,7 +11,7 @@ namespace templateApp
 {
 
 
-    public partial class NuevoChofer
+    public partial class ModificarChofer
     {
 
         /// <summary>
@@ -60,12 +60,21 @@ namespace templateApp
         protected global::System.Web.UI.WebControls.TextBox txtFechaNac;
 
         /// <summary>
-        /// Control btnGuardarChofer.
+        /// Control txtEstado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarChofer;
+        protected global::System.Web.UI.WebControls.TextBox txtEstado;
+
+        /// <summary>
+        /// Control btnGuardarChoferModific.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGuardarChoferModific;
     }
 }

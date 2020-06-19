@@ -9,12 +9,15 @@ using Negocio;
 
 namespace templateApp
 {
+    
     public partial class productos : System.Web.UI.Page
     {
         public List<Chofer> listaChoferes { get; set; }
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
 
 
 
@@ -22,8 +25,8 @@ namespace templateApp
             {
                 ChoferNegocio negocio = new ChoferNegocio();
                 listaChoferes = negocio.listar2();
-                //dgvar = listaArticulos;
-                //dgvPokemons.DataBind();
+                dgvChoferes.DataSource = listaChoferes;
+                dgvChoferes.DataBind();
 
                 Session[Session.SessionID + "listaChoferes"] = listaChoferes;
 
@@ -51,16 +54,35 @@ namespace templateApp
             {
                 throw ex;
             }
-
-
-
+            
 
 
         }
-
-
         
 
+        protected void dgvChoferes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
 
+        protected void dgvChoferes_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+            string idChofer = dgvChoferes.Rows[index].Cells[0].Text;
+            ChoferNegocio negocio = new ChoferNegocio();
+            negocio.bajaChofer(idChofer);
+            Response.Redirect("Choferes.aspx");
+
+        }
+
+        protected void lkbActualizar_Click(object sender, EventArgs e)
+        {   
+
+            Response.Redirect("ModificarChofer.aspx");
+
+        }
     }
+
+
+
 }

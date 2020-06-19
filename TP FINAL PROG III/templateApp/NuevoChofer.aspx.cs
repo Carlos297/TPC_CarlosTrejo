@@ -25,18 +25,23 @@ namespace templateApp
             ChoferNegocio negocio = new ChoferNegocio();
             try
             {
-                //if (chofer == null)
-                chofer = new Chofer();
+               if (chofer == null)
+                 chofer = new Chofer();
 
                 chofer.Legajo = int.Parse(txtLegajo.Text.Trim());
+                chofer.Apellido = txtApellido.Text.Trim();
                 chofer.Nombre = txtNombre.Text.Trim();
-                chofer.Apellido = txtAApellido.Text.Trim();
                 chofer.Sexo = txtSexo.Text.Trim();
-                chofer.FechaNacimiento = DateTime.Parse(txtFechaNac.Text);
-                chofer.Estado = txtEstado.Text.Trim();
+                chofer.FechaNacimiento = DateTime.Parse(txtFechaNac.Text.ToString());
+                //chofer.Estado = txtEstado.Text.Trim();
+                chofer.Estado = "A";
 
-                //if (chofer.IdChofer == 0)
-                negocio.agregar(chofer);
+                if (chofer.IdChofer == 0)
+                  negocio.agregar(chofer);
+
+
+                Response.Redirect("Choferes.aspx");
+
 
                 //else
                 //    negocio.modificar(articulo);

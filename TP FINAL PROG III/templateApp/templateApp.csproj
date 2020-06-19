@@ -128,6 +128,7 @@
     <Content Include="index.html" />
     <Content Include="index2.html" />
     <Content Include="inicio.aspx" />
+    <Content Include="ModificarChofer.aspx" />
     <Content Include="NuevoChofer.aspx" />
     <Content Include="pages\calendar.html" />
     <Content Include="pages\charts\chartjs.html" />
@@ -859,6 +860,13 @@
     </Compile>
     <Compile Include="Choferes.aspx.designer.cs">
       <DependentUpon>Choferes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarChofer.aspx.cs">
+      <DependentUpon>ModificarChofer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarChofer.aspx.designer.cs">
+      <DependentUpon>ModificarChofer.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevoChofer.aspx.cs">
       <DependentUpon>NuevoChofer.aspx</DependentUpon>

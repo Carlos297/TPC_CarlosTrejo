@@ -7,9 +7,20 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace templateApp {
-    
-    
-    public partial class productos {
+namespace templateApp
+{
+
+
+    public partial class productos
+    {
+
+        /// <summary>
+        /// Control dgvChoferes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvChoferes;
     }
 }

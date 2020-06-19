@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="Choferes.aspx.cs" Inherits="templateApp.productos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Productos</title>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -34,8 +33,8 @@
                 </div>
             </ItemTemplate>
         </asp:Repeater>--%>
-
-                    <table class="table table-hover">
+                    <%------------esta es una tabla bonita que vino con el template----------------%>
+                    <%--<table class="table table-hover">
                         <tr>
                             <th>ID</th>
                             <th>Legajo</th>
@@ -43,12 +42,13 @@
                             <th>Apellido</th>
                             <th>Sexo</th>
                             <th>Nacimiento</th>
-                       
                             <th>Estado</th>
-                           
+
                         </tr>
                         <% foreach (var item in listaChoferes)
-                            { %>
+                            { 
+
+                        %>
                         <tr>
                             <td><% = item.IdChofer %></td>
                             <td><% = item.Legajo %></td>
@@ -56,23 +56,61 @@
                             <td><% = item.Apellido %> </td>
                             <td><% = item.Sexo %> </td>
                             <td><% = item.FechaNacimiento.ToString() %> </td>
-                            
+
                             <td><% = item.Estado %> </td>
                             <td>
-                                <a class="btn btn-app">
-                                   
-                                    <i class="fa fa-remove"></i>Eliminar
-                                </a>
-                                <a class="btn btn-app">
-                                    <i class="fa fa-edit"></i>Editar
-                                </a>
+                                <asp:Button class="btn btn-app" ref="Choferes.aspx" ID="btnBajaChofer" runat="server"  Text="ELIMINAR"></asp:Button>
+
+                                <asp:Button class="btn btn-app" ref="Choferes.aspx" ID="btnEditarChofer" runat="server"  Text="EDITAR"></asp:Button>
+
+
                             </td>
                         </tr>
+                        <%  %>
                         <% } %>
-                    </table>
+                    </table>--%>
+
+
+
+                    <style>
+                        .oculto {
+                            display: none;
+                        }
+                    </style>
+
+
+
+                    <asp:GridView class="table table-hover" ID="dgvChoferes" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="dgvChoferes_SelectedIndexChanged" OnRowCommand="dgvChoferes_RowCommand">
+
+
+                        <Columns>
+
+                            <asp:BoundField HeaderText="Id" DataField="IdChofer" ItemStyle-CssClass="oculto" HeaderStyle-CssClass="oculto" />
+                            <asp:BoundField HeaderText="Legajo" DataField="Legajo" />
+                            <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+                            <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
+                            <asp:BoundField HeaderText="Sexo" DataField="Sexo" />
+                            <asp:BoundField HeaderText="Fecha Nacimiento" DataField="FechaNacimiento" />
+                            <asp:BoundField HeaderText="Estado" DataField="Estado" />
+                            <asp:ButtonField HeaderText="Opcion" ButtonType="Link" Text="Eliminar" CommandName="Eliminar" />     
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="lkbActualizar" runat="server" Text="Modificar" OnClick="lkbActualizar_Click"></asp:LinkButton>
+                                </ItemTemplate>
+
+                            </asp:TemplateField>      
+
+
+                        </Columns>
+                    </asp:GridView>
+
+
+
+
+
                 </div>
                 <!-- /.box-body -->
-               
+
             </div>
 
             <!-- /.box -->
