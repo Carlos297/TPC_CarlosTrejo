@@ -32,9 +32,7 @@
                     <asp:Button ID="btnArgumento" CssClass="btn btn-primary" Text="Argumento to Back" CommandArgument='<%#Eval("IdArt")%>' CommandName="idPokemon" runat="server" OnClick="btnArgumento_Click" />
                 </div>
             </ItemTemplate>
-        </asp:Repeater>--%>
-                    <%------------esta es una tabla bonita que vino con el template----------------%>
-                    <%--<table class="table table-hover">
+        </asp:Repeater>--%>                    <%------------esta es una tabla bonita que vino con el template----------------%>                    <%--<table class="table table-hover">
                         <tr>
                             <th>ID</th>
                             <th>Legajo</th>
@@ -80,25 +78,32 @@
 
 
 
-                    <asp:GridView class="table table-hover" ID="dgvChoferes" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="dgvChoferes_SelectedIndexChanged" OnRowCommand="dgvChoferes_RowCommand">
+                    <asp:GridView class="table table-hover" ID="dgvChoferes" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="dgvChoferes_SelectedIndexChanged" OnRowCommand="dgvChoferes_RowCommand" OnRowCancelingEdit="dgvChoferes_RowCancelingEdit" OnRowEditing="dgvChoferes_RowEditing" OnRowUpdating="dgvChoferes_RowUpdating" Width="930px">
 
 
                         <Columns>
 
-                            <asp:BoundField HeaderText="Id" DataField="IdChofer" ItemStyle-CssClass="oculto" HeaderStyle-CssClass="oculto" />
+
+                            <asp:CommandField SelectText="Editar" ShowSelectButton="True" />
+
+
+                            <asp:BoundField HeaderText="Id" DataField="IdChofer" ItemStyle-CssClass="oculto" HeaderStyle-CssClass="oculto">
+                                <HeaderStyle CssClass="oculto"></HeaderStyle>
+
+                                <ItemStyle CssClass="oculto"></ItemStyle>
+                            </asp:BoundField>
                             <asp:BoundField HeaderText="Legajo" DataField="Legajo" />
                             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
                             <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
                             <asp:BoundField HeaderText="Sexo" DataField="Sexo" />
                             <asp:BoundField HeaderText="Fecha Nacimiento" DataField="FechaNacimiento" />
-                            <asp:BoundField HeaderText="Estado" DataField="Estado" />
-                            <asp:ButtonField HeaderText="Opcion" ButtonType="Link" Text="Eliminar" CommandName="Eliminar" />     
-                            <asp:TemplateField>
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="lkbActualizar" runat="server" Text="Modificar" OnClick="lkbActualizar_Click"></asp:LinkButton>
-                                </ItemTemplate>
+                            <asp:BoundField HeaderText="Estado" DataField="Estado" Visible="False" />
+                            <asp:ButtonField HeaderText="Opcion" ButtonType="Link" Text="Eliminar" CommandName="Eliminar" />
 
-                            </asp:TemplateField>      
+
+
+                            <asp:CommandField ShowEditButton="True" Visible="False" />
+
 
 
                         </Columns>
@@ -111,6 +116,8 @@
                 </div>
                 <!-- /.box-body -->
 
+                <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+
             </div>
 
             <!-- /.box -->
@@ -119,23 +126,15 @@
 
 
 
+    <%-- <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton  ID="lkbActualizar" runat="server" Text="Modificar" OnClick="lkbActualizar_Click"></asp:LinkButton>
+                                </ItemTemplate>
+
+                            </asp:TemplateField>     --%>
+
     <%-- Esto reemplaza el foreach. Vean que cambia la forma de pasar el argumento a cada tag.
             En este caso se usa el numeral (#) y la función Eval que recibe por parámetro como string
             el nombre de la property de tu objeto. El repeater va a iterar lo que esté dentro de la colección
              que le asignamos en el LOAD. Se lo asignamos directamente por ID, en este caso, repetidor.--%>
-
-
-    <%--<asp:Repeater runat="server" ID="repetidor" OnItemCommand="repetidor_ItemCommand">
-            <ItemTemplate>
-                <div class="card">
-                    <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"><%#Eval("Nombre")%></h5>
-                        <p class="card-text"><%#Eval("Descripcion")%></p>
-                    </div>
-                    <a class="btn btn-primary" href="PokemonDetail.aspx?idpkm=<%#Eval("IdArt")%>">Seleccionar</a>
-                    <asp:Button ID="btnArgumento" CssClass="btn btn-primary" Text="Argumento to Back" CommandArgument='<%#Eval("IdArt")%>' CommandName="idPokemon" runat="server" OnClick="btnArgumento_Click" />
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>--%>
 </asp:Content>

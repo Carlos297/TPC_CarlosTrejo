@@ -1,65 +1,140 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="usuarios.aspx.cs" Inherits="templateApp.usuarios" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.Master" AutoEventWireup="true" CodeBehind="Usuarios.aspx.cs" Inherits="templateApp.usuarios" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Usuarios</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="row">
+    <div class="jumbotron">
+
+        <div class="row">
             <div class="col-xs-12">
-              <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title">Responsive Hover Table</h3>
-                  <div class="box-tools">
-                    <div class="input-group">
-                      <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search">
-                      <div class="input-group-btn">
-                        <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
-                      </div>
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Usuarios</h3>
                     </div>
-                  </div>
-                </div><!-- /.box-header -->
-                <div class="box-body table-responsive no-padding">
-                  <table class="table table-hover">
-                    <tbody><tr>
-                      <th>ID</th>
-                      <th>User</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Reason</th>
-                    </tr>
-                    <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="label label-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>219</td>
-                      <td>Alexander Pierce</td>
-                      <td>11-7-2014</td>
-                      <td><span class="label label-warning">Pending</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>657</td>
-                      <td>Bob Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="label label-primary">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                    <tr>
-                      <td>175</td>
-                      <td>Mike Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="label label-danger">Denied</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                    </tr>
-                  </tbody></table>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
+                    <!-- /.box-header -->
+
+
+
+
+                    <%--<asp:Repeater runat="server" ID="repetidor" OnItemCommand="repetidor_ItemCommand">
+            <ItemTemplate>
+                <div class="card">
+                    <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><%#Eval("Nombre")%></h5>
+                        <p class="card-text"><%#Eval("Descripcion")%></p>
+                    </div>
+                    <a class="btn btn-primary" href="PokemonDetail.aspx?idpkm=<%#Eval("IdArt")%>">Seleccionar</a>
+                    <asp:Button ID="btnArgumento" CssClass="btn btn-primary" Text="Argumento to Back" CommandArgument='<%#Eval("IdArt")%>' CommandName="idPokemon" runat="server" OnClick="btnArgumento_Click" />
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>--%>                    <%------------esta es una tabla bonita que vino con el template----------------%>                    <%--<table class="table table-hover">
+                        <tr>
+                            <th>ID</th>
+                            <th>Legajo</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Sexo</th>
+                            <th>Nacimiento</th>
+                            <th>Estado</th>
+
+                        </tr>
+                        <% foreach (var item in listaChoferes)
+                            { 
+
+                        %>
+                        <tr>
+                            <td><% = item.IdChofer %></td>
+                            <td><% = item.Legajo %></td>
+                            <td><% = item.Nombre %></td>
+                            <td><% = item.Apellido %> </td>
+                            <td><% = item.Sexo %> </td>
+                            <td><% = item.FechaNacimiento.ToString() %> </td>
+
+                            <td><% = item.Estado %> </td>
+                            <td>
+                                <asp:Button class="btn btn-app" ref="Choferes.aspx" ID="btnBajaChofer" runat="server"  Text="ELIMINAR"></asp:Button>
+
+                                <asp:Button class="btn btn-app" ref="Choferes.aspx" ID="btnEditarChofer" runat="server"  Text="EDITAR"></asp:Button>
+
+
+                            </td>
+                        </tr>
+                        <%  %>
+                        <% } %>
+                    </table>--%>
+
+
+
+                    <style>
+                        .oculto {
+                            display: none;
+                        }
+                    </style>
+
+
+
+                    <asp:GridView class="table table-hover" ID="dgvUsuarios" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="dgvUsuarios_SelectedIndexChanged" OnRowCommand="dgvUsuarios_RowCommand" OnRowCancelingEdit="dgvUsuarios_RowCancelingEdit" OnRowEditing="dgvUsuarios_RowEditing" OnRowUpdating="dgvUsuarios_RowUpdating" Width="930px">
+
+
+                        <Columns>
+
+
+                            <asp:CommandField SelectText="Editar" ShowSelectButton="True" />
+
+
+                            <asp:BoundField HeaderText="Id" DataField="IdUsuario" ItemStyle-CssClass="oculto" HeaderStyle-CssClass="oculto">
+                                <HeaderStyle CssClass="oculto"></HeaderStyle>
+
+                                <ItemStyle CssClass="oculto"></ItemStyle>
+                            </asp:BoundField>
+                            <asp:BoundField HeaderText="Codigo" DataField="CodUsuario" />
+                            <asp:BoundField HeaderText="Tipo" DataField="TipoUsuario" />
+                            <asp:BoundField HeaderText="Email" DataField="Email" />
+                            <asp:BoundField HeaderText="Sexo" DataField="Sexo" />
+                            <asp:BoundField HeaderText="Fecha Registracion" DataField="FechaReg" />
+                            <asp:BoundField HeaderText="Fecha Nacimiento" DataField="FechaNac" />
+                            <asp:BoundField HeaderText="Estado" DataField="Estado" Visible="False" />
+                            <asp:BoundField HeaderText="Clave" DataField="Clave" Visible="False" />
+                            <asp:ButtonField HeaderText="Opcion" ButtonType="Link" Text="Eliminar" CommandName="Eliminar" />
+
+
+
+                            <asp:CommandField ShowEditButton="True" Visible="False" />
+
+
+
+                        </Columns>
+                    </asp:GridView>
+
+
+
+
+
+                </div>
+                <!-- /.box-body -->
+
+                <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+
             </div>
-          </div>
+
+            <!-- /.box -->
+        </div>
+    </div>
 
 
+
+    <%-- <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton  ID="lkbActualizar" runat="server" Text="Modificar" OnClick="lkbActualizar_Click"></asp:LinkButton>
+                                </ItemTemplate>
+
+                            </asp:TemplateField>     --%>
+
+    <%-- Esto reemplaza el foreach. Vean que cambia la forma de pasar el argumento a cada tag.
+            En este caso se usa el numeral (#) y la función Eval que recibe por parámetro como string
+            el nombre de la property de tu objeto. El repeater va a iterar lo que esté dentro de la colección
+             que le asignamos en el LOAD. Se lo asignamos directamente por ID, en este caso, repetidor.--%>
 </asp:Content>

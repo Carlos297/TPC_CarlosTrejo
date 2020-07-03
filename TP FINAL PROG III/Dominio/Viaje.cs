@@ -9,7 +9,7 @@ namespace Dominio
     class Viaje
     {
         public int CodVIajes { get; set; }
-        public Destino Destino { get; set; }
+        public Terminal Destino { get; set; }
         public Micro Micro { get; set; }
         public Chofer Chofer { get; set; }
         public DateTime FechaViaje { get; set; }

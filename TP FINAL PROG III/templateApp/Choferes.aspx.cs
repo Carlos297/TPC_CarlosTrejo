@@ -62,24 +62,54 @@ namespace templateApp
 
         protected void dgvChoferes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            Session["Id"] = dgvChoferes.SelectedRow.Cells[1].Text;
+            Session["Legajo"] = dgvChoferes.SelectedRow.Cells[2].Text;
+            Session["Nombre"] = dgvChoferes.SelectedRow.Cells[3].Text;
+            Session["Apellido"] = dgvChoferes.SelectedRow.Cells[4].Text;
+            Session["Sexo"] = dgvChoferes.SelectedRow.Cells[5].Text;
+            Session["FechaNac"] = dgvChoferes.SelectedRow.Cells[6].Text;
+            Session["Estado"] = dgvChoferes.SelectedRow.Cells[7].Text;
+            Response.Redirect("ModificarChofer.aspx");
+
         }
 
         protected void dgvChoferes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-            string idChofer = dgvChoferes.Rows[index].Cells[0].Text;
-            ChoferNegocio negocio = new ChoferNegocio();
-            negocio.bajaChofer(idChofer);
-            Response.Redirect("Choferes.aspx");
+                if(e.CommandName == "Eliminar") {
+                int index = Convert.ToInt32(e.CommandArgument);
+                string idChofer = dgvChoferes.Rows[index].Cells[1].Text;
+                ChoferNegocio negocio = new ChoferNegocio();
+                negocio.bajaChofer(idChofer);
+                Response.Redirect("Choferes.aspx");
+            }
+                
+            
+
+            //if(e.CommandName == "Modificar")
+            //{
+            //    Response.Redirect("NuevoChofer.aspx");
+
+            //    //int index = Convert.ToInt32(e.CommandArgument);
+            //    //Chofer chofer = new Chofer();
+            //    //chofer = (Chofer)dgvChoferes.Rows.Cast;
+            //}
+
 
         }
 
-        protected void lkbActualizar_Click(object sender, EventArgs e)
-        {   
 
-            Response.Redirect("ModificarChofer.aspx");
 
+        protected void dgvChoferes_RowEditing(object sender, GridViewEditEventArgs e)
+        {       
+        }
+
+        protected void dgvChoferes_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
+        }
+
+        protected void dgvChoferes_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
         }
     }
 

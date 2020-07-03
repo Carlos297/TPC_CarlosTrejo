@@ -52,6 +52,8 @@
 
                 <asp:Button class="btn btn-block btn-success" ref="Choferes.aspx" ID="btnGuardarChofer" runat="server" OnClick="btnGuardar_Click" Text="GUARDAR">  </asp:Button>
 
+                <%--<asp:Button class="btn btn-block btn-success" ref="Choferes.aspx" ID="btnActualizar" runat="server" OnClick="btnActualizar_Click" Text="ACTUALIZAR">  </asp:Button>--%>
+
                 
 
             </div>

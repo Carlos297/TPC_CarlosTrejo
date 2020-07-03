@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chofer.cs" />
-    <Compile Include="Destino.cs" />
+    <Compile Include="Terminal.cs" />
     <Compile Include="Micro.cs" />
     <Compile Include="Pasaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

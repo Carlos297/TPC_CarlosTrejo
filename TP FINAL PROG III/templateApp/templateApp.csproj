@@ -128,8 +128,15 @@
     <Content Include="index.html" />
     <Content Include="index2.html" />
     <Content Include="inicio.aspx" />
+    <Content Include="Micros.aspx" />
     <Content Include="ModificarChofer.aspx" />
+    <Content Include="ModificarMicro.aspx" />
+    <Content Include="ModificarTerminal.aspx" />
+    <Content Include="ModificarUsuario.aspx" />
+    <Content Include="NuevaTerminal.aspx" />
     <Content Include="NuevoChofer.aspx" />
+    <Content Include="NuevoMicro.aspx" />
+    <Content Include="NuevoUsuario.aspx" />
     <Content Include="pages\calendar.html" />
     <Content Include="pages\charts\chartjs.html" />
     <Content Include="pages\charts\flot.html" />
@@ -836,7 +843,8 @@
     <Content Include="plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="Choferes.aspx" />
     <Content Include="starter.html" />
-    <Content Include="usuarios.aspx" />
+    <Content Include="Terminales.aspx" />
+    <Content Include="Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -861,12 +869,47 @@
     <Compile Include="Choferes.aspx.designer.cs">
       <DependentUpon>Choferes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Micros.aspx.cs">
+      <DependentUpon>Micros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Micros.aspx.designer.cs">
+      <DependentUpon>Micros.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ModificarChofer.aspx.cs">
       <DependentUpon>ModificarChofer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ModificarChofer.aspx.designer.cs">
       <DependentUpon>ModificarChofer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarMicro.aspx.cs">
+      <DependentUpon>ModificarMicro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarMicro.aspx.designer.cs">
+      <DependentUpon>ModificarMicro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarTerminal.aspx.cs">
+      <DependentUpon>ModificarTerminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarTerminal.aspx.designer.cs">
+      <DependentUpon>ModificarTerminal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUsuario.aspx.cs">
+      <DependentUpon>ModificarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuario.aspx.designer.cs">
+      <DependentUpon>ModificarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaTerminal.aspx.cs">
+      <DependentUpon>NuevaTerminal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevaTerminal.aspx.designer.cs">
+      <DependentUpon>NuevaTerminal.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevoChofer.aspx.cs">
       <DependentUpon>NuevoChofer.aspx</DependentUpon>
@@ -875,13 +918,34 @@
     <Compile Include="NuevoChofer.aspx.designer.cs">
       <DependentUpon>NuevoChofer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="usuarios.aspx.cs">
-      <DependentUpon>usuarios.aspx</DependentUpon>
+    <Compile Include="NuevoMicro.aspx.cs">
+      <DependentUpon>NuevoMicro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="usuarios.aspx.designer.cs">
-      <DependentUpon>usuarios.aspx</DependentUpon>
+    <Compile Include="NuevoMicro.aspx.designer.cs">
+      <DependentUpon>NuevoMicro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuario.aspx.cs">
+      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoUsuario.aspx.designer.cs">
+      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Terminales.aspx.cs">
+      <DependentUpon>Terminales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terminales.aspx.designer.cs">
+      <DependentUpon>Terminales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

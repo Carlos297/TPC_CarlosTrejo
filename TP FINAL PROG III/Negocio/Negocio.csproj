@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="ChoferNegocio.cs" />
-    <Compile Include="DestinoNegocio.cs" />
+    <Compile Include="TerminalNegocio.cs" />
     <Compile Include="MicroNegocio.cs" />
     <Compile Include="PasajeNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

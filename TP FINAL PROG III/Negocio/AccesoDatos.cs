@@ -44,6 +44,14 @@ namespace Negocio
 
         }
 
+        public void AgregarParametroFecha(string parametro, DateTime valor)
+        {
+
+            comando.Parameters.AddWithValue(parametro, valor);
+
+
+        }
+
         public void ejecutarLector()
         {
             try

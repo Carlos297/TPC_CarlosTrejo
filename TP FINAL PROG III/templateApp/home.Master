@@ -134,19 +134,10 @@
                         <li class="header">MENU DE NAVEGACION</li>
 
                         <li>
-                            <a href="usuarios.aspx">
+                            <a href="Inicio.aspx">
                                 <i class="fa fa-android"></i><span>inicio</span>
                             </a>
                         </li>
-
-
-                        <li>
-                            <a href="usuarios.aspx">
-                                <i class="fa fa-bus"></i><span>Micros</span>
-                            </a>
-
-                        </li>
-
 
                         <li class="treeview">
                             <a href="Choferes.aspx">
@@ -158,35 +149,53 @@
                             </ul>
                         </li>
 
-
                         <li class="treeview">
-                            <a href="usuarios.aspx">
-                                <i class="fa fa-tree"></i><span>Destinos</span>
-                            </a>
+                            <a href="Micros.aspx">
+                                <i class="fa fa-bus"></i><span>Micros</span>
+                             </a>
+                            <ul class="treeview-menu">
+                                <li><a href="../../Micros.aspx"><i class="fa fa-circle-o"></i>Micros</a></li>
+                                <li><a href="../../NuevoMicro.aspx"><i class="fa fa-circle-o"></i>Alta Micro</a></li>
+                             </ul>
 
                         </li>
 
 
 
                         <li class="treeview">
-                            <a href="usuarios.aspx">
+                            <a href="Terminales.aspx">
+                                <i class=" fa fa-flag-checkered"></i><span>Terminales</span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="../../Terminales.aspx"><i class="fa fa-circle-o"></i>Terminales</a></li>
+                                <li><a href="../../NuevaTerminal.aspx"><i class="fa fa-circle-o"></i>Alta Terminal</a></li>
+                             </ul>
+                        </li>
+
+
+
+                        <li class="treeview">
+                            <a href="Usuarios.aspx">
                                 <i class="fa fa-user"></i><span>Usuarios</span>
                             </a>
-
+                            <ul class="treeview-menu">
+                                <li><a href="../../Usuarios.aspx"><i class="fa fa-circle-o"></i>Usuarios</a></li>
+                                <li><a href="../../NuevoUsuario.aspx"><i class="fa fa-circle-o"></i>Alta Usuario</a></li>
+                             </ul>
                         </li>
 
 
 
 
                         <li class="treeview">
-                            <a href="usuarios.aspx">
+                            <a href=".aspx">
                                 <i class="fa fa-plane"></i><span>Viajes</span>
                             </a>
 
                         </li>
 
                         <li class="treeview">
-                            <a href="usuarios.aspx">
+                            <a href=".aspx">
                                 <i class="fa fa-ticket"></i><span>Pasajes</span>
                             </a>
 

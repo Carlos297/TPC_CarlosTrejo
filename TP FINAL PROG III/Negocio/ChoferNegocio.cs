@@ -16,6 +16,7 @@ namespace Negocio
     {
         public List<Chofer> lista;
 
+
         public List<Chofer> listar2()
         {
             lista = new List<Chofer>();
@@ -81,8 +82,6 @@ namespace Negocio
             }
 
         }
-
-
 
 
 
@@ -163,6 +162,7 @@ namespace Negocio
         public void modificarChofer(Chofer chofer)
         {
             AccesoDatos datos = new AccesoDatos();
+            SqlCommand comando = new SqlCommand();
             try
             {
                 //datos.setearQuery("Update POKEMONS set Nombre=@Nombre Where Id=@Id");
@@ -172,7 +172,8 @@ namespace Negocio
                 datos.AgregarParametro("@Apellidos", chofer.Apellido);
                 datos.AgregarParametro("@Nombres", chofer.Nombre);
                 datos.AgregarParametro("@Sexo", chofer.Sexo);
-                datos.AgregarParametro("@FechaNac", chofer.FechaNacimiento.ToString());
+                datos.AgregarParametroFecha("@FechaNac", chofer.FechaNacimiento);
+                //datos.AgregarParametro("@FechaNac", chofer.FechaNacimiento);
                 datos.AgregarParametro("@Estado", chofer.Estado);
                 datos.ejecutarAccion();
 

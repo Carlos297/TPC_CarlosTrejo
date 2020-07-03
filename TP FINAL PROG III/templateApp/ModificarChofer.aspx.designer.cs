@@ -15,6 +15,15 @@ namespace templateApp
     {
 
         /// <summary>
+        /// Control txtID.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtID;
+
+        /// <summary>
         /// Control txtLegajo.
         /// </summary>
         /// <remarks>
@@ -60,21 +69,12 @@ namespace templateApp
         protected global::System.Web.UI.WebControls.TextBox txtFechaNac;
 
         /// <summary>
-        /// Control txtEstado.
+        /// Control btnActualizar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEstado;
-
-        /// <summary>
-        /// Control btnGuardarChoferModific.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarChoferModific;
+        protected global::System.Web.UI.WebControls.Button btnActualizar;
     }
 }
