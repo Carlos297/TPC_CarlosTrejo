@@ -96,8 +96,8 @@
                             <asp:BoundField HeaderText="Sexo" DataField="Sexo" />
                             <asp:BoundField HeaderText="Fecha Registracion" DataField="FechaReg" />
                             <asp:BoundField HeaderText="Fecha Nacimiento" DataField="FechaNac" />
-                            <asp:BoundField HeaderText="Estado" DataField="Estado" Visible="False" />
-                            <asp:BoundField HeaderText="Clave" DataField="Clave" Visible="False" />
+                            <asp:BoundField HeaderText="Estado" DataField="Estado" Visible="false" />
+                            <asp:BoundField HeaderText="Clave" DataField="Clave" Visible="True" />
                             <asp:ButtonField HeaderText="Opcion" ButtonType="Link" Text="Eliminar" CommandName="Eliminar" />
 
 

@@ -3,42 +3,48 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     
-    <div class="contain">
+    <div >
 
-        <div class="jumbotron">
+        <div >
 
-            <div class="row">
+            <div >
 
-                <div class="box">
+                <div >
                     <div class="box-header">
                         <h3 class="box-title">Modificar Usuarios</h3>
                     </div>
                     
                     <div>
-                        <asp:TextBox class="form-control" ID="txtIDUsuario" runat="server"></asp:TextBox>
+                        <asp:TextBox class="form-control" ID="txtIDUsuario" Visible="false" runat="server"></asp:TextBox>
 
                     </div>
-
+                    <h5> Codigo de Usuario </h5>
                     <div>
                         <asp:TextBox class="form-control" ID="txtCodUsuario" runat="server"></asp:TextBox>
                         
                     </div>
+                    <h5> Tipo de Usuario </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Tipo Usuario" ID="txtTipoUsuario" runat="server"></asp:TextBox>
 
                     </div>
+                    <h5> Email </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Email" ID="txtEmail" runat="server"></asp:TextBox>
                     </div>
+                    <h5> Sexo </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Sexo" ID="txtSexo" runat="server"></asp:TextBox>
                     </div>
+                    <h5> Fecha de Registración </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Fecha Registracion" ID="txtFechaReg" runat="server" TextMode="DateTime"></asp:TextBox>
                     </div>
+                    <h5> Fecha de Nacimiento </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Fecha Nacimiento" ID="txtFechaNac" runat="server" TextMode="DateTime"></asp:TextBox>
                     </div>
+                    <h5> Clave </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Clave" ID="txtClave" runat="server"></asp:TextBox>
                     </div>

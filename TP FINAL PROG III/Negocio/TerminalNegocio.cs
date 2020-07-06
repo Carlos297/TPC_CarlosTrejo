@@ -24,7 +24,7 @@ namespace Negocio
 
             try
             {
-                datos.SetearQery("Select ID, CodTerminal, NomTerminal, Estado from Terminales where Estado = 'A'");
+                datos.SetearQery("Select ID, CodTerminal, NomTerminal, Estado from TerminalesOrigen where Estado = 'A'");
 
                 datos.ejecutarLector();
 
@@ -89,7 +89,7 @@ namespace Negocio
 
                 conexion.ConnectionString = "data source=localhost\\sqlexpress; initial catalog=TP_Final; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "insert into Terminales (CodTerminal, NomTerminal, Estado) Values (@CodTerminal, @NomTerminal, @Estado)";
+                comando.CommandText = "insert into TerminalesOrigen (CodTerminal, NomTerminal, Estado) Values (@CodTerminal, @NomTerminal, @Estado)";
                 comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@CodTerminal", nuevo.CodTerminal.ToString());
                 comando.Parameters.AddWithValue("@NomTerminal", nuevo.NombreTerminal.ToString());

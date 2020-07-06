@@ -163,14 +163,25 @@
 
 
                         <li class="treeview">
-                            <a href="Terminales.aspx">
-                                <i class=" fa fa-flag-checkered"></i><span>Terminales</span>
+                            <a href="TerminalesOrigen.aspx">
+                                <i class=" fa fa-flag-checkered"></i><span>Terminales Origen</span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../../Terminales.aspx"><i class="fa fa-circle-o"></i>Terminales</a></li>
-                                <li><a href="../../NuevaTerminal.aspx"><i class="fa fa-circle-o"></i>Alta Terminal</a></li>
+                                <li><a href="../../Terminales.aspx"><i class="fa fa-circle-o"></i>Terminales Origen</a></li>
+                                <li><a href="../../NuevaTerminal.aspx"><i class="fa fa-circle-o"></i>Alta Terminal Origen</a></li>
                              </ul>
                         </li>
+
+                         <li class="treeview">
+                            <a href="TerminalesDestino.aspx">
+                                <i class=" fa fa-flag-checkered"></i><span>Terminales Destino</span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="../../TerminalesDestino.aspx"><i class="fa fa-circle-o"></i>Terminales Destino</a></li>
+                                <li><a href="../../NuevaTerminalDestino.aspx"><i class="fa fa-circle-o"></i>Alta Terminal Destino</a></li>
+                             </ul>
+                        </li>
+
 
 
 
@@ -188,17 +199,23 @@
 
 
                         <li class="treeview">
-                            <a href=".aspx">
+                            <a href="Viajes.aspx">
                                 <i class="fa fa-plane"></i><span>Viajes</span>
                             </a>
-
+                             <ul class="treeview-menu">
+                                <li><a href="../../Viajes.aspx"><i class="fa fa-circle-o"></i>Viajes</a></li>
+                                <li><a href="../../NuevoViaje.aspx"><i class="fa fa-circle-o"></i>Alta Viaje</a></li>
+                             </ul>
                         </li>
 
                         <li class="treeview">
-                            <a href=".aspx">
+                            <a href="Pasajes.aspx">
                                 <i class="fa fa-ticket"></i><span>Pasajes</span>
                             </a>
-
+                            <ul class="treeview-menu">
+                                <li><a href="../../Pasajes.aspx"><i class="fa fa-circle-o"></i>Pasajes</a></li>
+                                <li><a href="../../SacarPasajes.aspx"><i class="fa fa-circle-o"></i>Sacar Pasajes</a></li>
+                             </ul>
                         </li>
 
 
@@ -222,7 +239,7 @@
 
 
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-                        <ol class="breadcrumb">
+                       <%-- <ol class="breadcrumb">--%>
                     </asp:ContentPlaceHolder>
 
 

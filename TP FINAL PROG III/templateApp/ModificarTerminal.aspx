@@ -5,26 +5,27 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
 
-    <div class="contain">
+    <div >
 
-        <div class="jumbotron">
+        <div >
 
-            <div class="row">
+            <div>
 
-                <div class="box">
+                <div >
                     <div class="box-header">
                         <h3 class="box-title">Modificar Terminal</h3>
                     </div>
 
                     <div>
-                        <asp:TextBox class="form-control" ID="txtID" runat="server"></asp:TextBox>
+                        <asp:TextBox class="form-control" ID="txtID" Visible="false" runat="server"></asp:TextBox>
 
                     </div>
-
+                    <h5> Codigo de Terminal </h5>
                     <div>
                         <asp:TextBox class="form-control" ID="txtCodTerminal" runat="server"></asp:TextBox>
 
                     </div>
+                    <h5> Nombre de Terminal </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Apellido" ID="txtNomTerminal" runat="server"></asp:TextBox>
 

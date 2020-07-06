@@ -5,34 +5,37 @@
 
 
     
-    <div class="contain">
+    <div>
 
-        <div class="jumbotron">
+        <div >
 
-            <div class="row">
+            <div >
 
-                <div class="box">
+                <div >
                     <div class="box-header">
                         <h3 class="box-title">Modificar Micro</h3>
                     </div>
                     
                     <div>
-                        <asp:TextBox class="form-control" ID="txtID" runat="server"></asp:TextBox>
+                        <asp:TextBox class="form-control" ID="txtID" runat="server" Visible="false"></asp:TextBox>
 
                     </div>
+                    <h5> Patente </h5>
 
                     <div>
                         <asp:TextBox class="form-control" ID="txtPatente" runat="server"></asp:TextBox>
                         
                     </div>
+                    <h5> Modelo </h5>
                     <div>
                         <asp:TextBox class="form-control"  ID="txtModelo" runat="server"></asp:TextBox>
 
                     </div>
-                 
+                    <h5> Fecha de Fabricacion </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Fecha Fabricacion" ID="txtFechaFabr" runat="server" TextMode="DateTime"></asp:TextBox>
                     </div>
+                    <h5> Cantidad de Asientos </h5>
                     <div>
                         <asp:TextBox class="form-control" ID="txtCantAsientos" runat="server"></asp:TextBox>
                         

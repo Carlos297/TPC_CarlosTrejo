@@ -5,36 +5,40 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
 
-    <div class="contain">
+    <div >
 
-        <div class="jumbotron">
+        <div >
 
-            <div class="row">
+            <div >
 
-                <div class="box">
+                <div >
                     <div class="box-header">
                         <h3 class="box-title">Modificar Chofer</h3>
                     </div>
                     
                     <div>
-                        <asp:TextBox class="form-control" ID="txtID" runat="server"></asp:TextBox>
+                        <asp:TextBox class="form-control" ID="txtID" runat="server" Visible = "false"></asp:TextBox>
 
                     </div>
-
+                    <h5> Legajo </h5>
                     <div>
                         <asp:TextBox class="form-control" ID="txtLegajo" runat="server"></asp:TextBox>
                         
                     </div>
+                    <h5> Apellido </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Apellido" ID="txtApellido" runat="server"></asp:TextBox>
 
                     </div>
+                    <h5> Nombre </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Nombre" ID="txtNombre" runat="server"></asp:TextBox>
                     </div>
+                    <h5> Sexo </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Sexo" ID="txtSexo" runat="server"></asp:TextBox>
                     </div>
+                    <h5> Fecha de Nacimiento </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Fecha Nacimiento" ID="txtFechaNac" runat="server" TextMode="DateTime"></asp:TextBox>
                     </div>
@@ -53,7 +57,7 @@
                 <%--<a href="Choferes.aspx" class="btn btn-app" id="btnGuardar">--%>
 
 
-
+                <div>   </div>
 
                 <%--<asp:Button class="btn btn-app" ref="Choferes.aspx" ID="btnGuardarChoferModific" runat="server" OnClick="btnGuardarChoferModific_Click" Text="GUARDAR">  </asp:Button >--%>
                 <asp:Button class="btn btn-block btn-success" ref="Choferes.aspx" ID="btnActualizar" runat="server" OnClick="btnActualizar_Click" Text="ACTUALIZAR"></asp:Button>

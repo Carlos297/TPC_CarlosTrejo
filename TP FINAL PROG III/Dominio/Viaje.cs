@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    class Viaje
+    public class Viaje
     {
-        public int CodVIajes { get; set; }
-        public Terminal Destino { get; set; }
+        public int IdVIajes { get; set; }
+        public string CodViaje { get; set; }
+        public Terminal TerminalOrigen { get; set; }
+        public TerminalDestino TerminalDestino { get; set; }
         public Micro Micro { get; set; }
         public Chofer Chofer { get; set; }
         public DateTime FechaViaje { get; set; }
         public decimal Costo { get; set; }
+
 
     }
 }

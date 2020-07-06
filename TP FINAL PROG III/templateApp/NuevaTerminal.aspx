@@ -10,7 +10,7 @@
 
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Nueva Terminal</h3>
+                        <h3 class="box-title">Nueva Terminal de Origen</h3>
                     </div>
 
                     <div>

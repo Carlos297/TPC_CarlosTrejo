@@ -25,7 +25,7 @@ namespace Negocio
 
             try
             {
-                datos.SetearQery("Select ID, CodUsuario, TipoUsuario, Email, Sexo, FechaReg, FechaNac, Estado, Clave from Usuarios where Estado = 'A'");
+                datos.SetearQery("Select ID, CodUsuario, TipoUsuario, Email, Sexo, FechaReg, FechaNac, Clave, Estado from Usuarios where Estado = 'A'");
 
                 datos.ejecutarLector();
 
@@ -55,10 +55,10 @@ namespace Negocio
                     if (!Convert.IsDBNull(datos.lector["FechaNac"]))
                         aux.FechaNac = datos.lector.GetDateTime(6);
 
-                    if (!Convert.IsDBNull(datos.lector["Estado"]))
-                        aux.Estado = datos.lector.GetString(7);
-
                     if (!Convert.IsDBNull(datos.lector["Clave"]))
+                        aux.Clave = datos.lector.GetString(7);
+
+                    if (!Convert.IsDBNull(datos.lector["Estado"]))
                         aux.Estado = datos.lector.GetString(8);
 
                     //if (!Convert.IsDBNull(datos.lector["FechaNac"]))
