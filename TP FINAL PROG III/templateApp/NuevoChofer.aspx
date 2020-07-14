@@ -30,6 +30,7 @@
                     <div>
                         <asp:TextBox class="form-control" placeholder="Sexo" ID="txtSexo" runat="server"></asp:TextBox>
                     </div>
+                    <h5>  Fecha de Nacimiento  </h5>
                     <div>
                         <asp:TextBox class="form-control" placeholder="Fecha Nacimiento" ID="txtFechaNac" runat="server" TextMode="Date"></asp:TextBox>
                     </div>

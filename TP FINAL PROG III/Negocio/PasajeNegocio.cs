@@ -115,5 +115,23 @@ namespace Negocio
             }
         }
 
+
+        public decimal averiguarPrecio(int IdViaje)
+        {
+            decimal precio=0;
+
+            AccesoDatos datos = new AccesoDatos();
+
+            datos.setearSP("SP_AveriguarPrecioViaje");
+            datos.AgregarParametro("@IdViaje", IdViaje.ToString());
+            datos.ejecutarLector();
+            while (datos.lector.Read())
+            {
+                precio = datos.lector.GetDecimal(0);
+            }
+
+         return precio;
+        }
+
     }
 }

@@ -46,11 +46,14 @@ namespace templateApp
                 pasaje.CodBoleto = txtCodBoleto.Text.Trim();
                 pasaje.Viaje = new Viaje();
                 pasaje.Viaje.IdVIajes = int.Parse(ddlViajes.SelectedValue);
-               
+
+                decimal costoViaje = negocio.averiguarPrecio(pasaje.Viaje.IdVIajes);
+
                 pasaje.CantBoletos = int.Parse(txtCantBoletos.Text);
-                var cantbol = int.Parse(txtCantBoletos.Text);
-                var costoViaje = pasaje.Viaje.Costo;
-                pasaje.PrecioTotal = cantbol*costoViaje;
+
+                int cantbol = int.Parse(txtCantBoletos.Text);
+              
+                pasaje.PrecioTotal = cantbol * (costoViaje);
                 //chofer.Estado = txtEstado.Text.Trim();
                 
                 if (pasaje.IdBoleto == 0)
